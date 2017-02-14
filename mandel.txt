@@ -3,6 +3,7 @@ Mandel queries for 2/14/17
 1. SELECT state, SUM(amount) FROM mandel GROUP BY state;
 2. SELECT purpose, SUM(amount) FROM mandel GROUP BY purpose ORDER BY SUM(amount) DESC;
 3. SELECT SUM(amount) FROM mandel WHERE purpose LIKE '%direct mail%';
-4. SELECT month, year, SUM(amount) FROM mandel GROUP BY month, year ORDER BY SUM(amount) DESC;
+4. Month: SELECT month, SUM(amount) from mandel GROUP BY month ORDER BY SUM(amount) DESC;
+Year: SELECT year, SUM(amount) from mandel GROUP BY year ORDER BY SUM(amount) DESC;
 5. SELECT payee, SUM(amount) FROM mandel WHERE purpose LIKE '%payroll' GROUP BY payee;
 
